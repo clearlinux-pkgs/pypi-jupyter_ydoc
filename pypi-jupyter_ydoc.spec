@@ -4,12 +4,13 @@
 #
 Name     : pypi-jupyter_ydoc
 Version  : 0.3.1
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/06/cb/a38b4a227b407c17483964537765ab5b99734960ac8293c922c3a8b55b9c/jupyter_ydoc-0.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/06/cb/a38b4a227b407c17483964537765ab5b99734960ac8293c922c3a8b55b9c/jupyter_ydoc-0.3.1.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
 Group    : Development/Tools
 License  : BSD-3-Clause
+Requires: pypi-jupyter_ydoc-license = %{version}-%{release}
 Requires: pypi-jupyter_ydoc-python = %{version}-%{release}
 Requires: pypi-jupyter_ydoc-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
@@ -24,6 +25,14 @@ BuildRequires : pypi(hatchling)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![PyPI](https://img.shields.io/pypi/v/jupyter-ydoc)](https://pypi.org/project/jupyter-ydoc/)
 [![npm (scoped)](https://img.shields.io/npm/v/@jupyter/ydoc)](https://www.npmjs.com/package/@jupyter/ydoc)
+
+%package license
+Summary: license components for the pypi-jupyter_ydoc package.
+Group: Default
+
+%description license
+license components for the pypi-jupyter_ydoc package.
+
 
 %package python
 Summary: python components for the pypi-jupyter_ydoc package.
@@ -57,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1675394335
+export SOURCE_DATE_EPOCH=1675644836
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -81,6 +90,8 @@ popd
 %install
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/pypi-jupyter_ydoc
+cp %{_builddir}/jupyter_ydoc-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/pypi-jupyter_ydoc/81d09a310cae56af32801b16ed77aca87475f9da || :
 pip install --root=%{buildroot} --no-deps --ignore-installed dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -97,6 +108,10 @@ popd
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/pypi-jupyter_ydoc/81d09a310cae56af32801b16ed77aca87475f9da
 
 %files python
 %defattr(-,root,root,-)
