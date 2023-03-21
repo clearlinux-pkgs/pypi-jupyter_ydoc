@@ -5,7 +5,7 @@
 #
 Name     : pypi-jupyter_ydoc
 Version  : 0.3.4
-Release  : 26
+Release  : 27
 URL      : https://files.pythonhosted.org/packages/59/87/f47edf737a9b76b863b759b28b3c2a93ff47389089b5cc369573138db5e4/jupyter_ydoc-0.3.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/59/87/f47edf737a9b76b863b759b28b3c2a93ff47389089b5cc369573138db5e4/jupyter_ydoc-0.3.4.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
@@ -67,7 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679337168
+export SOURCE_DATE_EPOCH=1679419069
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
