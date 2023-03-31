@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-jupyter_ydoc
-Version  : 0.3.4
-Release  : 30
-URL      : https://files.pythonhosted.org/packages/59/87/f47edf737a9b76b863b759b28b3c2a93ff47389089b5cc369573138db5e4/jupyter_ydoc-0.3.4.tar.gz
-Source0  : https://files.pythonhosted.org/packages/59/87/f47edf737a9b76b863b759b28b3c2a93ff47389089b5cc369573138db5e4/jupyter_ydoc-0.3.4.tar.gz
+Version  : 1.0.0
+Release  : 31
+URL      : https://files.pythonhosted.org/packages/32/47/d8fb971d35dc5965dedc5cc5acadb9a41352f0b1655ee37b738281ea6d4d/jupyter_ydoc-1.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/32/47/d8fb971d35dc5965dedc5cc5acadb9a41352f0b1655ee37b738281ea6d4d/jupyter_ydoc-1.0.0.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -15,7 +15,6 @@ Requires: pypi-jupyter_ydoc-license = %{version}-%{release}
 Requires: pypi-jupyter_ydoc-python = %{version}-%{release}
 Requires: pypi-jupyter_ydoc-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : pypi(hatch_nodejs_version)
 BuildRequires : pypi(hatchling)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -56,10 +55,10 @@ python3 components for the pypi-jupyter_ydoc package.
 
 
 %prep
-%setup -q -n jupyter_ydoc-0.3.4
-cd %{_builddir}/jupyter_ydoc-0.3.4
+%setup -q -n jupyter_ydoc-1.0.0
+cd %{_builddir}/jupyter_ydoc-1.0.0
 pushd ..
-cp -a jupyter_ydoc-0.3.4 buildavx2
+cp -a jupyter_ydoc-1.0.0 buildavx2
 popd
 
 %build
@@ -67,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1679677997
+export SOURCE_DATE_EPOCH=1680274060
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
