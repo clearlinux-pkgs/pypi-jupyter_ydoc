@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-jupyter_ydoc
-Version  : 1.0.0
-Release  : 31
-URL      : https://files.pythonhosted.org/packages/32/47/d8fb971d35dc5965dedc5cc5acadb9a41352f0b1655ee37b738281ea6d4d/jupyter_ydoc-1.0.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/32/47/d8fb971d35dc5965dedc5cc5acadb9a41352f0b1655ee37b738281ea6d4d/jupyter_ydoc-1.0.0.tar.gz
+Version  : 1.0.1
+Release  : 32
+URL      : https://files.pythonhosted.org/packages/be/de/798cff01789088b145d0f9888cb57ddee4269f5e6c8d54f141c74912e387/jupyter_ydoc-1.0.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/be/de/798cff01789088b145d0f9888cb57ddee4269f5e6c8d54f141c74912e387/jupyter_ydoc-1.0.1.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -55,10 +55,10 @@ python3 components for the pypi-jupyter_ydoc package.
 
 
 %prep
-%setup -q -n jupyter_ydoc-1.0.0
-cd %{_builddir}/jupyter_ydoc-1.0.0
+%setup -q -n jupyter_ydoc-1.0.1
+cd %{_builddir}/jupyter_ydoc-1.0.1
 pushd ..
-cp -a jupyter_ydoc-1.0.0 buildavx2
+cp -a jupyter_ydoc-1.0.1 buildavx2
 popd
 
 %build
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680274060
+export SOURCE_DATE_EPOCH=1681313751
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
