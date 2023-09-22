@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-jupyter_ydoc
-Version  : 1.0.2
-Release  : 33
-URL      : https://files.pythonhosted.org/packages/f5/32/7be05fc28fc1fdad7f616b6b3f9ad02dc099cad39084f9f66f45b3b26d69/jupyter_ydoc-1.0.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/f5/32/7be05fc28fc1fdad7f616b6b3f9ad02dc099cad39084f9f66f45b3b26d69/jupyter_ydoc-1.0.2.tar.gz
+Version  : 1.1.0
+Release  : 34
+URL      : https://files.pythonhosted.org/packages/06/75/36fb55ec9503efec5a2fcc4373102dca4dc0d6a12fe94e747415f4d06988/jupyter_ydoc-1.1.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/06/75/36fb55ec9503efec5a2fcc4373102dca4dc0d6a12fe94e747415f4d06988/jupyter_ydoc-1.1.0.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -15,6 +15,7 @@ Requires: pypi-jupyter_ydoc-license = %{version}-%{release}
 Requires: pypi-jupyter_ydoc-python = %{version}-%{release}
 Requires: pypi-jupyter_ydoc-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
+BuildRequires : pypi(hatch_nodejs_version)
 BuildRequires : pypi(hatchling)
 # Suppress stripping binaries
 %define __strip /bin/true
@@ -55,10 +56,10 @@ python3 components for the pypi-jupyter_ydoc package.
 
 
 %prep
-%setup -q -n jupyter_ydoc-1.0.2
-cd %{_builddir}/jupyter_ydoc-1.0.2
+%setup -q -n jupyter_ydoc-1.1.0
+cd %{_builddir}/jupyter_ydoc-1.1.0
 pushd ..
-cp -a jupyter_ydoc-1.0.2 buildavx2
+cp -a jupyter_ydoc-1.1.0 buildavx2
 popd
 
 %build
@@ -66,15 +67,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1681485378
+export SOURCE_DATE_EPOCH=1695343104
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 -m build --wheel --skip-dependency-check --no-isolation
 pushd ../buildavx2/
