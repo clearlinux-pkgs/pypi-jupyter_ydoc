@@ -7,7 +7,7 @@
 #
 Name     : pypi-jupyter_ydoc
 Version  : 2.0.1
-Release  : 38
+Release  : 39
 URL      : https://files.pythonhosted.org/packages/51/31/efad19f331c5ed226a743480184a4001bf6f9c81242c6f9be1498924f304/jupyter_ydoc-2.0.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/51/31/efad19f331c5ed226a743480184a4001bf6f9c81242c6f9be1498924f304/jupyter_ydoc-2.0.1.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
