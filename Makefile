@@ -1,5 +1,5 @@
 PKG_NAME := pypi-jupyter_ydoc
-URL = https://files.pythonhosted.org/packages/51/31/efad19f331c5ed226a743480184a4001bf6f9c81242c6f9be1498924f304/jupyter_ydoc-2.0.1.tar.gz
+URL = https://files.pythonhosted.org/packages/fa/5d/369982304bf0c3af38463deabcae995a7b990b50be61896c64221d914a21/jupyter_ydoc-2.1.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
