@@ -6,10 +6,10 @@
 # autospec commit: 5424026
 #
 Name     : pypi-jupyter_ydoc
-Version  : 3.0.1
-Release  : 45
-URL      : https://files.pythonhosted.org/packages/fa/52/ad1028b20a2eb2efc01734c67bc22b2476cd2818739fc3509c4172e5ffdd/jupyter_ydoc-3.0.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/fa/52/ad1028b20a2eb2efc01734c67bc22b2476cd2818739fc3509c4172e5ffdd/jupyter_ydoc-3.0.1.tar.gz
+Version  : 3.0.2
+Release  : 46
+URL      : https://files.pythonhosted.org/packages/a8/7b/bcd792dbbb6ab6d2db7fb20d924803d6facb340dc66501344d0882c7454d/jupyter_ydoc-3.0.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/a8/7b/bcd792dbbb6ab6d2db7fb20d924803d6facb340dc66501344d0882c7454d/jupyter_ydoc-3.0.2.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
 Group    : Development/Tools
 License  : BSD-3-Clause
@@ -58,10 +58,10 @@ python3 components for the pypi-jupyter_ydoc package.
 
 
 %prep
-%setup -q -n jupyter_ydoc-3.0.1
-cd %{_builddir}/jupyter_ydoc-3.0.1
+%setup -q -n jupyter_ydoc-3.0.2
+cd %{_builddir}/jupyter_ydoc-3.0.2
 pushd ..
-cp -a jupyter_ydoc-3.0.1 buildavx2
+cp -a jupyter_ydoc-3.0.2 buildavx2
 popd
 
 %build
@@ -69,7 +69,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1731941065
+export SOURCE_DATE_EPOCH=1733161941
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
