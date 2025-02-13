@@ -7,7 +7,7 @@
 #
 Name     : pypi-jupyter_ydoc
 Version  : 3.0.3
-Release  : 47
+Release  : 48
 URL      : https://files.pythonhosted.org/packages/8e/3f/7eede907aac174a4715cfdef942cd61188b3e9a50956b0d4198bba33f7f5/jupyter_ydoc-3.0.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8e/3f/7eede907aac174a4715cfdef942cd61188b3e9a50956b0d4198bba33f7f5/jupyter_ydoc-3.0.3.tar.gz
 Summary  : Document structures for collaborative editing using Ypy
